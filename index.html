@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Básico -->
+    <title>Haz tu Pedido | Catálogos Digitales para Emprendedores en Cuba</title>
+    <meta name="description"
+        content="La plataforma líder para negocios y emprendedores en Cuba. Crea tu catálogo digital gratis, gestiona productos y recibe pedidos directamente por WhatsApp sin comisiones.">
+    <meta name="keywords"
+        content="catalogos digitales cuba, ventas whatsapp cuba, emprendedores cubanos, negocios cuba, haz tu pedido, tienda online cuba, supabase astro cuba">
+    <meta name="author" content="Haz tu Pedido">
+    <link rel="icon" type="image/favicon" href="/assets/favicon.ico">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://haztupedido.cu/">
+    <meta property="og:title" content="Haz tu Pedido - Tu Tienda Digital en WhatsApp">
+    <meta property="og:description"
+        content="Potencia tu negocio en Cuba. Catálogos rápidos, fáciles y sin intermediarios. ¡Empieza a vender hoy!">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Haz tu Pedido | Catálogos Digitales Cuba">
+    <meta property="twitter:description"
+        content="Diseñado para el emprendedor cubano. Crea tu inventario online y recibe pedidos por WhatsApp con carga ultra rápida.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        electricBlue: '#0047FF',
+                        darkBlue: '#0036C1',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0047FF 0%, #002687 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .scroll-mt {
+            scroll-margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100" role="navigation"
+        aria-label="Menú principal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-14 rounded-lg flex items-center justify-center text-white">
+                        <img src="/assets/logo.webp" alt="Haz tu Pedido Logo">
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-gray-900">Haz tu Pedido</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-wider">
+                    <a href="#beneficios" class="hover:text-electricBlue transition-colors">Beneficios</a>
+                    <a href="#funcionalidades" class="hover:text-electricBlue transition-colors">Funciones</a>
+                    <a href="#tecnologia" class="hover:text-electricBlue transition-colors">Tecnología</a>
+                    <a href="https://haz-tu-pedido.vercel.app/"
+                        class="bg-electricBlue text-white px-6 py-3 rounded-full hover:bg-darkBlue transition-all shadow-lg shadow-electricBlue/20"
+                        target="_blank">Empezar
+                        gratis</a>
+                </div>
+                <button class="md:hidden text-gray-900 text-2xl" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="text-center lg:text-left space-y-8">
+                    <div
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-electricBlue/10 text-electricBlue text-sm font-bold animate-pulse">
+                        🇨🇺 Especial para Negocios y Emprendedores Cubanos
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+                        Vende más en Cuba con tu <span class="text-electricBlue">Catálogo Digital</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-xl mx-auto lg:mx-0">
+                        La herramienta definitiva para emprendimientos locales. Crea tu tienda, gestiona tu stock y
+                        recibe pedidos directo a tu WhatsApp. Rápido, ligero y eficiente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="https://haz-tu-pedido.vercel.app/register"
+                            class="px-8 py-4 bg-electricBlue text-white text-lg font-bold rounded-xl shadow-2xl shadow-electricBlue/40 hover:scale-105 transition-transform text-center"
+                            target="_blank">
+                            Crear mi catálogo cubano
+                        </a>
+                        <a href="#funcionalidades"
+                            class="px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 text-lg font-bold rounded-xl hover:bg-gray-50 transition-colors text-center">
+                            Ver funciones para negocios
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 lg:mt-0 relative">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-electricBlue/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-300/20 rounded-full blur-3xl"></div>
+
+                    <!-- Mockup de Catálogo Digital -->
+                    <div
+                        class="relative mx-auto w-64 h-[500px] bg-gray-900 rounded-[3rem] border-[8px] border-gray-800 shadow-2xl shadow-black/20 overflow-hidden">
+                        <div class="absolute top-0 w-full h-6 bg-gray-800 flex justify-center items-end">
+                            <div class="w-20 h-4 bg-gray-900 rounded-t-lg"></div>
+                        </div>
+                        <div class="h-full bg-white pt-8 px-4 overflow-y-auto">
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="w-8 h-8 rounded-md">
+                                    <img src="/assets/logo.webp" alt="Logo Haz tu Pedido">
+                                </div>
+                                <i class="fas fa-shopping-cart text-gray-400"></i>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-center">
+                                    <img src="/assets/screenshoot.png" alt="Captura de pantalla">
+                                </div>
+                                <div
+                                    class="bg-green-500 p-3 rounded-lg text-white text-[10px] flex items-center justify-center font-bold">
+                                    <i class="fab fa-whatsapp mr-1"></i> Pedir por WhatsApp
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEO Stats Section -->
+    <section class="bg-electricBlue py-12" aria-label="Estadísticas de la plataforma">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <article>
+                <div class="text-4xl font-bold">0%</div>
+                <p class="text-blue-200 text-sm">Comisiones de Venta</p>
+            </article>
+            <article>
+                <div class="text-4xl font-bold">0.5s</div>
+                <p class="text-blue-200 text-sm">Carga en Datos Móviles</p>
+            </article>
+            <article>
+                <div class="text-4xl font-bold">24/7</div>
+                <p class="text-blue-200 text-sm">Tu Negocio Abierto</p>
+            </article>
+            <article>
+                <div class="text-4xl font-bold">Gratis</div>
+                <p class="text-blue-200 text-sm">Plan para Principiantes</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-24 scroll-mt">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Ventajas para el mercado
+                    cubano</h2>
+                <p class="text-4xl font-extrabold text-gray-900">Potenciamos el emprendimiento local</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:shadow-xl transition-all border border-transparent hover:border-electricBlue/20">
+                    <div
+                        class="w-14 h-14 bg-electricBlue/10 text-electricBlue rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Optimizado para Cuba</h3>
+                    <p class="text-gray-600">Páginas extremadamente ligeras que cargan rápido incluso con conexiones
+                        3G/4G inestables.</p>
+                </div>
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:shadow-xl transition-all border border-transparent hover:border-electricBlue/20">
+                    <div
+                        class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Venta Directa</h3>
+                    <p class="text-gray-600">Sin intermediarios. El cliente elige en el catálogo y te contacta directo
+                        al WhatsApp para acordar pago y envío.</p>
+                </div>
+                <div
+                    class="p-8 bg-gray-50 rounded-3xl hover:shadow-xl transition-all border border-transparent hover:border-electricBlue/20">
+                    <div
+                        class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Visibilidad Provincial</h3>
+                    <p class="text-gray-600">Filtra tus clientes por provincia para que te encuentren los compradores
+                        que realmente están cerca de ti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section for AI Crawlers -->
+    <section id="funcionalidades" class="py-24 bg-gray-900 text-white scroll-mt overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-12">Funcionalidades clave para negocios modernos</h2>
+                    <ul class="space-y-8">
+                        <li class="flex items-start">
+                            <div
+                                class="mt-1 bg-electricBlue p-2 rounded-full mr-4 flex items-center justify-center w-8">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Catálogo Digital Personalizado</h4>
+                                <p class="text-gray-400">Crea una URL única para tu negocio (ej.
+                                    haztupedido.vercel.app/tu-marca) y compártela en redes.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="mt-1 bg-electricBlue p-2 rounded-full mr-4 flex items-center justify-center w-8">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Carrito Multiproducto</h4>
+                                <p class="text-gray-400">Tus clientes pueden armar un pedido completo y enviarlo en un
+                                    solo mensaje estructurado.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="mt-1 bg-electricBlue p-2 rounded-full mr-4 flex items-center justify-center w-8">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Gestión de Inventario Real</h4>
+                                <p class="text-gray-400">Añade fotos, descripciones, precios y marca la disponibilidad
+                                    de tus artículos al instante.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl border border-white/10 bg-white/5 shadow-xl">
+                            <i class="fas fa-mobile text-electricBlue text-3xl mb-4"></i>
+                            <p class="font-bold text-lg">Venta desde el Celular</p>
+                            <p class="text-sm opacity-80">Optimizado para que tus clientes compren cómodamente desde su
+                                teléfono.</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border border-white/10 bg-white/5 shadow-xl">
+                            <i class="fas fa-signal text-electricBlue text-3xl mb-4"></i>
+                            <p class="font-bold text-lg">Negocio Siempre Online</p>
+                            <p class="text-sm opacity-80">Tu catálogo disponible las 24 horas, los 7 días de la semana,
+                                sin caídas.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 pt-12">
+                        <div class="glass-card p-6 rounded-2xl border border-white/10 bg-white/5 shadow-xl">
+                            <i class="fas fa-bolt text-electricBlue text-3xl mb-4"></i>
+                            <p class="font-bold text-lg">Carga Ultra Rápida</p>
+                            <p class="text-sm opacity-80">Sin esperas. Tus productos aparecen al instante, incluso con
+                                datos móviles lentos.</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border border-white/10 bg-white/5 shadow-xl">
+                            <i class="fas fa-lock text-electricBlue text-3xl mb-4"></i>
+                            <p class="font-bold text-lg">Control Total y Seguro</p>
+                            <p class="text-sm opacity-80">Gestiona tus precios y stock de forma privada con acceso
+                                protegido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack (Authority Marker for SEO) -->
+    <section id="tecnologia" class="py-20 bg-white scroll-mt">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-gray-400 font-bold uppercase tracking-widest text-xs mb-8">Tecnología de Vanguardia</h3>
+            <div
+                class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-rocket text-2xl"></i>
+                    <span class="text-xl font-bold">Astro 5.0</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fab fa-css3 text-2xl"></i>
+                    <span class="text-xl font-bold">Tailwind CSS</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-database text-2xl"></i>
+                    <span class="text-xl font-bold">Supabase DB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto gradient-bg rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 relative z-10">Lleva tu emprendimiento al siguiente
+                nivel</h2>
+            <p class="text-xl mb-10 text-blue-100 max-w-2xl mx-auto relative z-10">
+                Regístrate hoy y crea tu catálogo profesional. Es gratis para empezar y perfecto para crecer.
+            </p>
+            <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://haz-tu-pedido.vercel.app/"
+                    class="bg-white text-electricBlue px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-colors text-center">
+                    Comenzar Ahora
+                </a>
+                <a href="#beneficios"
+                    class="bg-darkBlue/40 backdrop-blur-md border border-white/20 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-darkBlue/60 transition-colors text-center">
+                    Saber más
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-14 rounded flex items-center justify-center text-white">
+                            <img src="/assets/logo.webp" alt="Haz tu Pedido Logo">
+                        </div>
+                        <span class="text-xl font-bold">Haz tu Pedido</span>
+                    </div>
+                    <p class="text-gray-500 max-w-sm mb-6">
+                        Impulsando la transformación digital de los emprendedores en Cuba con herramientas gratuitas y
+                        de alto rendimiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
