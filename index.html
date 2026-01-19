@@ -96,6 +96,21 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 text-xl font-bold uppercase md:hidden">
+        <a href="#beneficios" class="hover:text-electricBlue transition-colors">Beneficios</a>
+        <a href="#funcionalidades" class="hover:text-electricBlue transition-colors">Funciones</a>
+        <a href="#tecnologia" class="hover:text-electricBlue transition-colors">Tecnología</a>
+        <a href="https://haz-tu-pedido.vercel.app/"
+            class="bg-electricBlue text-white px-6 py-3 rounded-full hover:bg-darkBlue transition-all shadow-lg shadow-electricBlue/20"
+            target="_blank">Empezar
+            gratis</a>
+        <button class="absolute top-8 right-8 text-gray-900 text-3xl" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
     <!-- Hero Section -->
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -328,7 +343,7 @@
     <!-- CTA Section -->
     <section class="py-20 px-4">
         <div class="max-w-5xl mx-auto gradient-bg rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 relative z-10">Lleva tu emprendimiento al siguiente
+            <h2 class="text-2xl md:text-5xl font-extrabold mb-6 relative z-10">Lleva tu emprendimiento al siguiente
                 nivel</h2>
             <p class="text-xl mb-10 text-blue-100 max-w-2xl mx-auto relative z-10">
                 Regístrate hoy y crea tu catálogo profesional. Es gratis para empezar y perfecto para crecer.
@@ -375,6 +390,26 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openMenuButton = document.querySelector('button[aria-label="Abrir menú"]');
+        const closeMenuButton = document.querySelector('button[aria-label="Cerrar menú"]');
+
+        openMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
         });
     </script>
